@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="overlay">
+        Loading...
+    </div>
+    <div class="container one" id="js-container-one">
+        <canvas class="canvas" id="js-canvas-one" width="320" height="440"></canvas>
+        <div class="message">
+            <img id="one" src="admin/upload/01.jpg" alt="">
+            <div class="note one"></div>
+        </div>
+    </div>
+    <div class="container two" id="js-container-two">
+        <canvas class="canvas" id="js-canvas-two" width="320" height="440"></canvas>
+        <div class="message">
+            <img id="two" src="admin/upload/02.jpg" alt="">
+            <div class="note two"></div>
+        </div>
+    </div>
+    <div class="container three" id="js-container-three">
+        <canvas class="canvas" id="js-canvas-three" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="three" src="admin/upload/03.jpg" alt="">
+            <div class="note three"></div>
+        </div>
+    </div>
+    <div class="container four" id="js-container-four">
+        <canvas class="canvas" id="js-canvas-four" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="four" src="admin/upload/04.jpg" alt="">
+            <div class="note four"></div>
+        </div>
+    </div>
+    <div class="container five" id="js-container-five">
+        <canvas class="canvas" id="js-canvas-five" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="five" src="admin/upload/05.jpg" alt="">
+            <div class="note five"></div>
+        </div>
+    </div>
+    <div class="container six" id="js-container-six">
+        <canvas class="canvas" id="js-canvas-six" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="six" src="admin/upload/06.jpg" alt="">
+            <div class="note six"></div>
+        </div>
+    </div>
+    <div class="container seven" id="js-container-seven">
+        <canvas class="canvas" id="js-canvas-seven" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="seven" src="admin/upload/07.jpg" alt="">
+            <div class="note seven"></div>
+        </div>
+    </div>
+    <div class="container eight" id="js-container-eight">
+        <canvas class="canvas" id="js-canvas-eight" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="eight" src="admin/upload/08.jpg" alt="">
+            <div class="note eight"></div>
+        </div>
+    </div>
+    <div class="container nine" id="js-container-nine">
+        <canvas class="canvas" id="js-canvas-nine" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="nine" src="admin/upload/09.jpg" alt="">
+            <div class="note nine"></div>
+        </div>
+    </div>
+    <div class="container ten" id="js-container-ten">
+        <canvas class="canvas" id="js-canvas-ten" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="ten" src="admin/upload/10.jpg" alt="">
+            <div class="note ten"></div>
+        </div>
+    </div>
+    <div class="container eleven" id="js-container-eleven">
+        <canvas class="canvas" id="js-canvas-eleven" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="eleven" src="admin/upload/11.jpg" alt="">
+            <div class="note eleven"></div>
+        </div>
+    </div>
+    <div class="container twelve" id="js-container-twelve">
+        <canvas class="canvas" id="js-canvas-twelve" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="twelve" src="admin/upload/12.jpg" alt="">
+            <div class="note twelve"></div>
+        </div>
+    </div>
+    <div class="container thirteen" id="js-container-thirteen">
+        <canvas class="canvas" id="js-canvas-thirteen" width="320" height="440"></canvas>
+        <div class="message">
+            <img td="thirteen" src="admin/upload/13.jpg" alt="">
+            <div class="note thirteen"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scratchcard.js"></script>
+    <script>
+        $.ajax({
+            url: 'admin/fetch.php',
+            type: 'GET',
+            success: function(data) {
+                var contentone = $('<div>').append(data).find('td:contains("01.jpg")').next().text();
+                $('.note.one').html(contentone);
+
+                var contenttwo = $('<div>').append(data).find('td:contains("02.jpg")').next().text();
+                $('.note.two').html(contenttwo);
+
+                var contentthree = $('<div>').append(data).find('td:contains("03.jpg")').next().text();
+                $('.note.three').html(contentthree);
+
+                var contentfour = $('<div>').append(data).find('td:contains("04.jpg")').next().text();
+                $('.note.four').html(contentfour);
+
+                var contentfive = $('<div>').append(data).find('td:contains("05.jpg")').next().text();
+                $('.note.five').html(contentfive);
+
+                var contentsix = $('<div>').append(data).find('td:contains("06.jpg")').next().text();
+                $('.note.six').html(contentsix);
+
+                var contentseven = $('<div>').append(data).find('td:contains("07.jpg")').next().text();
+                $('.note.seven').html(contentseven);
+
+                var contenteight = $('<div>').append(data).find('td:contains("08.jpg")').next().text();
+                $('.note.eight').html(contenteight);
+
+                var contentnine = $('<div>').append(data).find('td:contains("09.jpg")').next().text();
+                $('.note.nine').html(contentnine);
+
+                var contentten = $('<div>').append(data).find('td:contains("10.jpg")').next().text();
+                $('.note.ten').html(contentten);
+
+                var contenteleven = $('<div>').append(data).find('td:contains("11.jpg")').next().text();
+                $('.note.eleven').html(contenteleven);
+
+                var contenttwelve = $('<div>').append(data).find('td:contains("12.jpg")').next().text();
+                $('.note.twelve').html(contenttwelve);
+
+                var contentthirteen = $('<div>').append(data).find('td:contains("13.jpg")').next().text();
+                $('.note.thirteen').html(contentthirteen);
+            }
+        });
+    </script>
+    <script>
+        $(window).load(function() {
+            $('.overlay').fadeOut();           
+        })
+
+        $(document).ready(function(){
+            setTimeout(function(){ 
+                
+                $(".note").each(function(){
+                    if ($(this).text() == ''){
+                    $(this).css('display','none');
+                    }
+                else{
+                    $(this).css('display','flex');
+                    }  
+                });
+            }, 1000);
+        })
+    </script>
+</body>
+
+</html>

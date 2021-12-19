@@ -1,0 +1,212 @@
+body {
+  padding: 20px 0;
+  font-family: Campton;
+}
+
+html,
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Campton;
+  src: url(fonts/CamptonBold.woff);
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Campton;
+}
+
+.container {
+  position: relative;
+  width: 320px;
+  height: 440px;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  position: absolute;
+  overflow: hidden;
+}
+
+.container.one {
+  z-index: 20;
+}
+
+.container.two {
+  z-index: 19;
+}
+
+.container.three {
+  z-index: 18;
+}
+
+.container.four {
+  z-index: 17;
+}
+
+.container.five {
+  z-index: 16;
+}
+
+.container.six {
+  z-index: 15;
+}
+
+.container.seven {
+  z-index: 14;
+}
+
+.container.eight {
+  z-index: 13;
+}
+
+.container.nine {
+  z-index: 12;
+}
+
+.container.ten {
+  z-index: 11;
+}
+
+.container.eleven {
+  z-index: 10;
+}
+
+.container.twelve {
+  z-index: 9;
+}
+
+.container.thirteen {
+  z-index: 8;
+}
+
+.container.fourteen {
+  z-index: 7;
+}
+
+.container.fifteen {
+  z-index: 6;
+}
+
+.message {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 42px;
+  font-weight: bold;
+  font-family: Campton;
+  color: #4161f0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.message img {
+  width: 320px;
+  height: 440px;
+}
+
+.message .note {
+  display: none;
+  font-size: 22px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+}
+
+.form {
+  padding: 20px;
+}
+/*# sourceMappingURL=style.css.map */
